@@ -4,7 +4,7 @@ import { Container, Grid, Card, CardMedia, Button, Pagination, Modal, Box, Typog
 import { auth, db } from '../../services/firebase';
 import { doc, getDoc, setDoc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-
+import keys from '../../keys';
 function Home() {
     const [photos, setPhotos] = useState([]);
     const [page, setPage] = useState(1);
@@ -16,7 +16,7 @@ function Home() {
         const fetchPhotos = async () => {
             const response = await axios.get(`https://api.pexels.com/v1/curated?page=${page}&per_page=10`, {
                 headers: {
-                    Authorization: '4BKH5R2QqlIeaVzPcu785fsnhOq0bna6gxSTFuu3tqityJVc3yCTm6E3'
+                    Authorization: keys.googleKey
                 }
             });
             setPhotos(response.data.photos);
