@@ -22,8 +22,8 @@ function SignIn() {
 
     return (
         <Container>
-            <Box mt={5}>
-                <Typography variant="h4" component="h1" gutterBottom>
+            <Box mt={5} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '300px', margin: 'auto' }}>
+                <Typography variant="h4" component="h1" gutterBottom sx={{pt:4}}>
                     Sign In
                 </Typography>
 
@@ -56,7 +56,7 @@ function SignIn() {
 
 
 
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" style={{ width: '100%' }}>
                         Sign In
                     </Button>
                 </form>

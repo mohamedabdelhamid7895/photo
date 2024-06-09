@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import Favorites from './components/Fav/fav';
 import Navbar from './components/Home/navbar';
 import ProtectedRoute from './components/protectedRoutes/protectedRoute';
+import Footer from './components/Home/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </div>
   );
 }

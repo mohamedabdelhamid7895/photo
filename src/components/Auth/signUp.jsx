@@ -22,12 +22,12 @@ function SignUp() {
 
     return (
         <Container>
-            <Box mt={5}>
-                <Typography variant="h4" component="h1" gutterBottom>
+            <Box mt={5} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '300px', margin: 'auto' }}>
+                <Typography variant="h4" component="h1" gutterBottom sx={{pt:3}}>
                     Sign Up
                 </Typography>
                 {error && <Typography color="error">{error}</Typography>}
-                <form onSubmit={handleSignUp}>
+                <form onSubmit={handleSignUp} style={{ width: '100%' }}>
                     <TextField
                         label="Email"
                         type="email"
@@ -46,12 +46,13 @@ function SignUp() {
                         margin="normal"
                         required
                     />
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" style={{ width: '100%' }}>
                         Sign Up
                     </Button>
                 </form>
             </Box>
         </Container>
+
     );
 }
 
